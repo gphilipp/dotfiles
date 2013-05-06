@@ -21,7 +21,11 @@
                       ;; Misc.
                       markdown-mode
                       twilight-theme
-                      hlinum)
+                      hlinum
+                      evil
+                      ;; switch buffers without C-x b on each
+                      buffer-move
+                      org)
   "A list of packages to ensure are installed at launch.")
 
 ;; Automaticaly install any missing packages
@@ -40,3 +44,17 @@
  '(font-lock-warning-face ((t (:inherit nil :foreground "red" :background nil))))
  '(linum-highlight-face ((t (:inherit default :background "color-238" :foreground "white"))))
  '(show-paren-match ((((class color) (background dark)) (:inherit nil :foreground "red")))))
+
+;;; I prefer cmd key for meta
+(setq mac-option-key-is-meta nil
+      mac-command-key-is-meta t
+      mac-command-modifier 'meta
+      mac-option-modifier 'none)
+
+(set-face-attribute 'default nil :height 150)
+
+;;; evil configuration
+(evil-mode 1)
+(evil-ex-define-cmd "n[ew]" 'evil-window-new)
+(define-key evil-insert-state-map (kbd "j f") 'evil-normal-state)
+(setq evil-normal-state-cursor 'hollow)
