@@ -10,7 +10,7 @@
 (load-theme 'birds-of-paradise-plus  t)                                    ; Load my preferred theme
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)                        ; Enable rainbow delimiters when programming
 (remove-hook 'prog-mode-hook 'esk-turn-on-hl-line-mode)                    ; Disable emacs-starter-kits line highlighting
-(set-face-attribute 'default nil :family "Consolas" :height 160)           ; Use 10-pt Consolas as default font
+(set-face-attribute 'default nil :family "Source Code Pro Medium" :height 140)           ; Use 10-pt Consolas as default font
 
 (global-linum-mode t)                                                      ; Always show line numbers on left
 (setq linum-format "%4d ")                                                 ; Line numbers gutter should be four characters wide
