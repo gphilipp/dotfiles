@@ -7,9 +7,10 @@
 (setq projectile-show-paths-function 'projectile-hashify-with-relative-paths) ; Projectile shows full relative paths
 
 ;; Visual
-(load-theme 'twilight t)                                                   ; Load my preferred theme, twilight
+(load-theme 'birds-of-paradise-plus  t)                                    ; Load my preferred theme
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)                        ; Enable rainbow delimiters when programming
 (remove-hook 'prog-mode-hook 'esk-turn-on-hl-line-mode)                    ; Disable emacs-starter-kits line highlighting
+(set-face-attribute 'default nil :family "Consolas" :height 160)           ; Use 10-pt Consolas as default font
 
 (global-linum-mode t)                                                      ; Always show line numbers on left
 (setq linum-format "%4d ")                                                 ; Line numbers gutter should be four characters wide
@@ -20,6 +21,7 @@
 (setq-default tab-width 2)                                                 ; Tab width of 2
 (fset 'yes-or-no-p 'y-or-n-p)                                              ; Emacs prompts should accept "y" or "n" instead of the full word
 
+;; Sound
 (setq visible-bell nil)                                                    ; No more Mr. Visual Bell Guy.
 
 
