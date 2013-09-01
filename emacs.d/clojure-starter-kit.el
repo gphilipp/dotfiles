@@ -22,13 +22,11 @@
 (fset 'yes-or-no-p 'y-or-n-p)                                              ; Emacs prompts should accept "y" or "n" instead of the full word
 
 ;; Sound
-(setq visible-bell nil)                                                    ; No more Mr. Visual Bell Guy.
-
+(setq visible-bell 1)                                                    ; No more Mr. Visual Bell Guy.
 
 ;; Clojure
 (setq auto-mode-alist (cons '("\\.edn$" . clojure-mode) auto-mode-alist))  ; *.edn are Clojure files
 (setq auto-mode-alist (cons '("\\.cljs$" . clojure-mode) auto-mode-alist)) ; *.cljs are Clojure files
-
 
 ;; nREPL customizations
 (setq nrepl-popup-stacktraces nil)                                         ; Don't aggresively popup stacktraces
