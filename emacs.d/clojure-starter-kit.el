@@ -59,3 +59,32 @@
             (define-key ido-completion-map [up] 'ido-prev-match)
             (define-key ido-completion-map (kbd "C-n") 'ido-next-match)
             (define-key ido-completion-map (kbd "C-p") 'ido-prev-match)))
+
+(defun paredit-wrap-round-from-behind ()
+  (interactive)
+  (forward-sexp -1)
+  (paredit-wrap-round)
+  (insert " ")
+  (forward-char -1))
+
+
+(require 'paredit)
+
+(defun paredit-wrap-round-from-behind ()
+  (interactive)
+  (forward-sexp -1)
+  (paredit-wrap-round)
+  (insert " ")
+  (forward-char -1))
+
+(define-key paredit-mode-map (kbd "M-(") 'paredit-wrap-round)
+
+
+
+
+
+
+
+;(define-key paredit-mode-map (kbd "M-)")
+;'paredit-wrap-round-from-behind)
+
