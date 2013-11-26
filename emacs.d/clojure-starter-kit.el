@@ -21,15 +21,17 @@
 (setq-default tab-width 2)                                                 ; Tab width of 2
 (fset 'yes-or-no-p 'y-or-n-p)                                              ; Emacs prompts should accept "y" or "n" instead of the full word
 
-;; Sound
-(setq visible-bell 1)                                                    ; No more Mr. Visual Bell Guy.
+(setq visible-bell nil)                                                    ; No more Mr. Visual Bell Guy.
+
 
 ;; Clojure
 (setq auto-mode-alist (cons '("\\.edn$" . clojure-mode) auto-mode-alist))  ; *.edn are Clojure files
 (setq auto-mode-alist (cons '("\\.cljs$" . clojure-mode) auto-mode-alist)) ; *.cljs are Clojure files
 
+
 ;; nREPL customizations
-(setq nrepl-popup-stacktraces nil)                                         ; Don't aggresively popup stacktraces
+(setq nrepl-hide-special-buffers t)                                        ; Don't show buffers like connection or server
+(setq nrepl-popup-on-error nil)                                            ; Don't popup new buffer for errors (show in nrepl buffer)
 (setq nrepl-popup-stacktraces-in-repl t)                                   ; Display stacktrace inline
 
 (add-hook 'nrepl-interaction-mode-hook 'nrepl-turn-on-eldoc-mode)          ; Enable eldoc - shows fn argument list in echo area
