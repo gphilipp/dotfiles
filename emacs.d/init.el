@@ -24,7 +24,8 @@
                       ;; Clojure & friends
                       clojure-mode
                       auto-complete
-                      nrepl
+                      cider
+                      clojure-cheatsheet
                       rainbow-delimiters
                       ;; Project navigation
                       projectile
@@ -55,7 +56,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(linum-highlight-face ((t (:inherit default :background "color-238" :foreground "white"))) t))
+ '(linum-highlight-face ((t (:inherit default :background "color-238" :foreground "white")))))
 
 ;;; I prefer cmd key for meta
 (setq mac-option-key-is-meta nil
@@ -90,3 +91,4 @@
 (setq erc-server "irc.freenode.net"
       erc-port 6667
       erc-nick "gphilippart")
+(custom-set-variables)
