@@ -63,8 +63,7 @@
 (setq mac-option-key-is-meta nil
       mac-command-key-is-meta t
       mac-command-modifier 'meta
-      mac-option-modif
-      ier 'none)
+      mac-option-modifier 'none)
 
 ;; so that I can run lein from emacs
 (setenv "PATH" (concat (getenv "PATH") ";c:\\HOMEWARE\\leiningen-2.1.3"))
