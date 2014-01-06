@@ -45,6 +45,7 @@
   (when (not (package-installed-p p))
     (package-install p)))
 
+
 ;; Load the provided Clojure start kit configurations
 (load (concat user-emacs-directory "clojure-starter-kit.el"))
 
@@ -62,11 +63,12 @@
 (setq mac-option-key-is-meta nil
       mac-command-key-is-meta t
       mac-command-modifier 'meta
-      mac-option-modifier 'none)
+      mac-option-modif
+      ier 'none)
 
 ;; so that I can run lein from emacs
-(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
-(setq exec-path (append exec-path '("/usr/local/bin")))
+(setenv "PATH" (concat (getenv "PATH") ";c:\\HOMEWARE\\leiningen-2.1.3"))
+(setq exec-path (append exec-path '(";c:\\HOMEWARE\\leiningen-2.1.3")))
 
 ;;; evil configuration
 ;;(evil-mode 1)
