@@ -28,15 +28,16 @@
 (setq auto-mode-alist (cons '("\\.cljs$" . clojure-mode) auto-mode-alist)) ; *.cljs are Clojure files
 
 
-;; nREPL customizations
+;; cider customizations
+(setq cider-repl-tab-command 'cider-repl-indent-and-complete-symbol)
 (setq nrepl-hide-special-buffers t)                                        ; Don't show buffers like connection or server
-(setq nrepl-popup-on-error nil)                                            ; Don't popup new buffer for errors (show in nrepl buffer)
-(setq nrepl-popup-stacktraces-in-repl t)                                   ; Display stacktrace inline
-
+(setq cider-popup-on-error nil)                                            ; Don't popup new buffer for errors (show in nrepl buffer)
+(setq cider-popup-stacktraces t)                                           ; Display stacktrace inline
+(setq cider-repl-print-length 100)                                         ; Limit the output 
 (add-hook 'nrepl-interaction-mode-hook 'nrepl-turn-on-eldoc-mode)          ; Enable eldoc - shows fn argument list in echo area
-(add-hook 'nrepl-mode-hook 'paredit-mode)                                  ; Use paredit in *nrepl* buffer
-
-(add-to-list 'same-window-buffer-names "*nrepl*")                          ; Make C-c C-z switch to *nrepl*
+(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)                      ; Enable eldoc in Clojure buffers
+(add-hook 'cider-repl-mode-hook 'paredit-mode)                             ; paredit in *nrepl* buffer
+;; (add-to-list 'same-window-buffer-names "*nrepl*")                       ; Make C-c C-z switch to *nrepl*
 
 
 ;; Ido-mode customizations
