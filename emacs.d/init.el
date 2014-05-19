@@ -10,6 +10,8 @@
 
 (require 'package)
 (add-to-list 'package-archives
+             '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
+(add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
@@ -32,7 +34,7 @@
                       ack-and-a-half
                       ;; Misc.
                       markdown-mode
-                      twilight-theme
+                      birds-of-paradise-plus-theme
                       hlinum
                       evil
                       ;; switch buffers without C-x b on each
@@ -93,3 +95,4 @@
       erc-port 6667
       erc-nick "gphilippart")
 (custom-set-variables)
+
